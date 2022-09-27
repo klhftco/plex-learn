@@ -1,24 +1,55 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import logo from './PlexTechLogo.png';
+
+class Practice_1 extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      value: 1,
+    }
+  }
+
+  render() {
+    const current = this.state.value
+    return (
+      <div>
+        <div className='section two'>
+          <h2>This is a representation of a component.</h2>
+          <div className='buttons'>
+            <button onClick={() => this.setState({value : current + 1})}>+</button>
+            <button onClick={() => this.setState({value : current - 1})}>-</button>
+          </div>
+          <h2>Current Value: {current}</h2>
+        </div>
+        <Practice_2 value = {current}/>
+      </div>
+    )
+  }
+}
+
+function Practice_2(props) {
+  return (
+    <div className='section three'>
+      <h2>This is a representation of props passed down from the section above: {props.value}</h2>
+    </div>
+  )
+}
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <html>
+      <head>
+        <title>React Playground</title>
+      </head>
+      <body>
+        <div className='section one'>
+            <h1>Welcome to the React Demo for PlexTech Advanced Team, Fall 2022</h1>
+            <img src={logo} width='3%' height='40%'/>
+        </div>
+        <Practice_1/>
+      </body>
+    </html>
   );
 }
 
