@@ -1,0 +1,37 @@
+body {
+  font-family: 'Oxygen', 'Segoe UI';
+}
+
+.section {
+  margin: auto;
+  display: flex;
+  margin-top: 2em;
+  height: 20%;
+  width: 80%;
+  align-items: center;
+}
+
+.one {
+  border: medium solid orange;
+  justify-content: space-around;
+}
+
+.two {
+  justify-content: space-evenly;
+  border: medium solid rgb(7, 155, 178);
+}
+
+.three {
+  justify-content: space-evenly;
+  border: medium solid rgb(58, 153, 117);
+}
+
+.buttons {
+  width: 10%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.buttons > button {
+  width: 30px;
+}
