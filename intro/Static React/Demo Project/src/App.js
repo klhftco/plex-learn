@@ -2,6 +2,13 @@ import React from 'react';
 import './App.css';
 import logo from './PlexTechLogo.png';
 
+var Button = ({title, task}) => {
+  return (
+    <button onClick = { task }>{ title }</button>
+  );
+}
+
+
 class Practice_1 extends React.Component {
   constructor(props) {
     super(props);
@@ -10,6 +17,9 @@ class Practice_1 extends React.Component {
     }
   }
 
+  // <button onClick={() => this.setState({value : current + 1})}>+</button>
+  // <button onClick={() => this.setState({value : current - 1})}>-</button>
+
   render() {
     const current = this.state.value
     return (
@@ -17,8 +27,8 @@ class Practice_1 extends React.Component {
         <div className='section two'>
           <h2>This is a representation of a component.</h2>
           <div className='buttons'>
-            <button onClick={() => this.setState({value : current + 1})}>+</button>
-            <button onClick={() => this.setState({value : current - 1})}>-</button>
+            <Button title="+" task={() => this.setState({value : current + 1})} />
+            <Button title="-" task={() => this.setState({value : current - 1})} />
           </div>
           <h2>Current Value: {current}</h2>
         </div>
