@@ -80,7 +80,7 @@ def get_pleet(pleet_id):
 @app.route("/pleets", methods=["GET"])
 def get_recent_pleets():
     sorted_pleets = Pleets[:]
-    sorted_pleets.sort(key=lambda p1: p1['datetime'])
+    sorted_pleets.sort(reverse=True, key=lambda p1: p1['datetime'])
     end_index = min(10, len(sorted_pleets))
     pleet_list = [replace_userid(pleet) for pleet in sorted_pleets[:end_index]]
     ret = {'pleets': pleet_list}
@@ -88,6 +88,7 @@ def get_recent_pleets():
 
 @app.route("/pleets", methods=["POST"])
 def add_pleet():
+    # print(request.__dict__)
     addData = request.form
     # request.form handles all non-json encoded data
     # request.json handles all json format data
