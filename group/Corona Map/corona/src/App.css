@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Sen:wght@400;700;800&display=swap');
+
+* {
+  margin: 0;
+  font-family: 'Oswald', sans-serif;
+}
+
+.App {
+  text-align: center;
+}
+
+.hor {
+  display: flex;
+  flex: row;
+}
+
+.mapContainer {
+  width: 85%;
+  height: 70vh;
+}
+
+.flag {
+  height: 50px;
+  width: 90px;
+  border: solid 1px rgba(0, 0, 0, 0.25);
+}
+
+.country {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.country h1 {
+  font-size: 1.8rem;
+}
+
+.stats {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.red {
+  color: #F00;
+}
+
+.countryInfo {
+  display: block;
+  /* flex-direction: column; */
+  /* height: 300px; */
+  width: 250px;
+  padding: 10px;
+  border-radius: 50px;
+}
+
+
+.statContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffbfbf;
+  width: 15%;
+  margin-top: -9px;
+  border-left: solid 3px #404040;
+}
+
+.header {
+  height: 8vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.25rem;
+  color: #4C17FE;
+}
+
+.statBlock {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  border-top: solid 3px #404040;
+  height: calc((70vh - 8vh) / 3);
+  width: 100%;
+}
+.statBlock h1 {
+  font-size: 2rem;
+  color: #404040;
+}
+.statBlock p {
+  margin-top: 10px;
+  font-size: 2rem;
+  padding: 10px;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #ffbfbf;
+  letter-spacing: 2px;
+}
+
+.graphContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0;
+  background-color: rgba(0, 0, 255, 0.25);
+  height: calc(30vh - 3px);
+  width: 100%;
+  overflow-y: hidden;
+  border-top: solid 3px #404040;
+}
+
+.graph1 {
+  background-color: #bbb;
+}
+
+.graph2 {
+  width: 50%;
+  font-size: 3rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  border-left: solid 3px #404040;
+  height: 100%;
+}
